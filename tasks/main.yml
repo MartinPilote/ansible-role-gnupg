@@ -1,0 +1,12 @@
+---
+- include_vars: "{{ ansible_distribution }}.yml"
+
+- name: Install package
+  tags:
+    - gnupg
+  package:
+    name: 
+      - "{{ gnupg }}"
+      - "{{ libusb }}"
+    state: latest
+...
